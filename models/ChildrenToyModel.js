@@ -7,10 +7,12 @@ var ChildrenToySchema = mongoose.Schema({
     Price: Number,
     image: String,
     Describe:String,
+
     brand: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'brands'  
-    }
+    },
+    category:String
 });
 
 var ChildrenToy = mongoose.model("ChildrenToy", ChildrenToySchema, "ChildrenToy");
